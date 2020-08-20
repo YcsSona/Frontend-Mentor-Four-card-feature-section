@@ -1,0 +1,131 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--VeryLightGray);
+  font-family: "Poppins", sans-serif;
+  padding: 3rem;
+}
+
+header {
+  padding: 6rem 0 7rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header__title {
+  font-weight: 200;
+  font-size: 1.8rem;
+}
+
+.header__subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--VeryDarkBlue);
+  margin-bottom: 1.8rem;
+}
+
+.header__info {
+  font-size: 1.2rem;
+  color: var(--GrayishBlue);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.cards .card {
+  background-color: #fff !important;
+  max-width: 40rem;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0.2rem 0.8rem 2rem hsla(229, 6%, 66%, 0.35);
+  border-radius: 0.8rem;
+}
+
+.card.card--cyan {
+  border-top: 4px solid var(--Cyan);
+}
+
+.card.card--red {
+  border-top: 4px solid var(--Red);
+}
+
+.card.card--orange {
+  border-top: 4px solid var(--Orange);
+}
+
+.card.card--blue {
+  border-top: 4px solid var(--Blue);
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--VeryDarkBlue);
+}
+
+.card__subtitle {
+  font-size: 1.25rem;
+  color: var(--GrayishBlue);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.card__img {
+  display: block;
+  margin-left: auto;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 75em) {
+  .header__title,
+  .header__subtitle {
+    font-size: 3rem;
+  }
+
+  .header__info {
+    font-size: 1.6rem;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+
+  .cards .card {
+    margin-right: 3rem;
+  }
+
+  .card.card--blue {
+    margin-right: 0;
+  }
+
+}
